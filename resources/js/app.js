@@ -25,7 +25,3 @@ createInertiaApp({
         color: '#4B5563',
     },
 });
-
-// for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-//     createInertiaApp.component(key, component)
-// }

@@ -8,7 +8,7 @@ import {FileTypes} from '@/Enums/FileTypes.js';
 import {useForm} from '@inertiajs/vue3';
 import {ElNotification} from 'element-plus';
 import {
-Download
+    Download
 } from '@element-plus/icons-vue'
 
 
@@ -123,11 +123,18 @@ watch(dateRange, (newValue) => {
                                 />
                             </div>
                             <div class="flex">
-                                <el-button type="primary" @click.prevent="onSearch" :disabled="!dateRange">Search</el-button>
+                                <el-button type="primary" @click.prevent="onSearch" :disabled="!dateRange">Search
+                                </el-button>
                                 <div v-if="allowDownload && tasks.data.length" class="ml-3">
-                                    <el-button type="primary" :icon="Download" @click.prevent="onDownload(FileTypes.CSV)">CSV</el-button>
-                                    <el-button type="primary" :icon="Download" @click.prevent="onDownload(FileTypes.XLSX)">XLSX</el-button>
-                                    <el-button type="primary" :icon="Download" @click.prevent="onDownload(FileTypes.PDF)">PDF</el-button>
+                                    <el-button type="primary" :icon="Download"
+                                               @click.prevent="onDownload(FileTypes.CSV)">CSV
+                                    </el-button>
+                                    <el-button type="primary" :icon="Download"
+                                               @click.prevent="onDownload(FileTypes.XLSX)">XLSX
+                                    </el-button>
+                                    <el-button type="primary" :icon="Download"
+                                               @click.prevent="onDownload(FileTypes.PDF)">PDF
+                                    </el-button>
                                 </div>
                             </div>
                         </div>
